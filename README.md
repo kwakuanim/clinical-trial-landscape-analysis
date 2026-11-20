@@ -171,7 +171,15 @@ The dashboard includes:
 ---
 
 # Key Findings and Visualizations
+The analysis examined 5,000 completed interventional clinical trials retrieved from ClinicalTrials.gov.
 
+- **Enrollment:** The studies reported a combined enrollment of 2,425,863 participants, with a median enrollment of 62 participants per trial.
+- **Study phases:** Phase information was not reported for 3,424 studies (68.5%). Among studies with reported phases, Phase 2 (436) and Phase 1 (351) were the most common categories.
+- **Funding:** The OTHER funding category accounted for 3,723 studies (74.5%), followed by INDUSTRY with 996 studies (19.9%).
+- **Study conditions:** Anxiety and obesity were among the most frequently reported conditions.
+- **Temporal distribution:** Studies starting in 2025 were particularly prominent in the selected dataset.
+
+**Interpretation:** The dataset comprises a selected sample of recently updated, completed interventional studies. Therefore, the observed distributions and temporal patterns should not be interpreted as representative of all clinical trials registered worldwide.
 ## 1. Drug vs. Non-Drug Clinical Trials
 
 ![Drug vs Non-Drug Clinical Trials](figures/Drug%20vs%20non-drug.png)
