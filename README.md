@@ -180,3 +180,313 @@ The analysis examined 5,000 completed interventional clinical trials retrieved f
 - **Funding:** The OTHER funding category accounted for 3,723 studies (74.5%), followed by INDUSTRY with 996 studies (19.9%).
 - **Drug classification:** Drug interventions were identified in 1,530 studies (30.6%), while 3,470 studies (69.4%) were classified as non-drug trials.
 - **Study conditions:** Anxiety and obesity were among the most frequently reported conditions.
+- **Temporal distribution:** Studies starting in 2025 were particularly prominent in the selected dataset.
+
+**Interpretation:** The dataset comprises a selected sample of recently updated, completed interventional studies. Therefore, the observed distributions and temporal patterns should not be interpreted as representative of all clinical trials registered worldwide.
+
+## 1. Drug vs. Non-Drug Clinical Trials
+
+![Drug vs Non-Drug Clinical Trials](figures/Drug%20vs%20non%20drug.png)
+
+Among the 5,000 analyzed studies:
+
+| Classification | Number | Percentage |
+|---|---:|---:|
+| Drug trials | 1,530 | 30.6% |
+| Non-drug trials | 3,470 | 69.4% |
+| **Total** | **5,000** | **100%** |
+
+Non-drug trials represented the larger proportion of the analyzed dataset.
+
+The classification reflects the project's intervention-based grouping and should not automatically be interpreted as a regulatory classification.
+
+---
+
+## 2. Clinical Trials by Funding Classification
+
+![Funding Classification](figures/Funding%20classification.png)
+
+The distribution of clinical trials across funding categories showed:
+
+| Funding Type | Number of Trials | Percentage |
+|---|---:|---:|
+| OTHER | 3,723 | 74.5% |
+| INDUSTRY | 996 | 19.9% |
+| OTHER_GOV | 144 | 2.9% |
+| NIH | 78 | 1.6% |
+| FED | 36 | 0.7% |
+| NETWORK | 22 | 0.4% |
+| INDIV | 1 | 0.02% |
+| **Total** | **5,000** | **Approximately 100%** |
+
+Percentages are rounded.
+
+The OTHER classification accounted for the largest proportion of studies, followed by INDUSTRY.
+
+These categories describe registry funding classifications rather than the financial amounts invested in individual studies.
+
+---
+
+## 3. Drug vs. Non-Drug Trials by Funding Category
+
+![Drug Trials by Funding Category](figures/Drug%20trials%20by%20funding%20category.png)
+
+The proportion of drug and non-drug studies varied across funding categories.
+
+Industry-funded studies had a higher proportion of drug trials than several other funding classifications.
+
+Non-drug studies predominated in a number of non-industry funding categories.
+
+This comparison illustrates how intervention classifications differ across funding groups within the selected dataset.
+
+---
+
+## 4. Funding Categories by Study Start Year
+
+![Funding Over Time](figures/Funding%20over%20time.png)
+
+The distribution of clinical trials across study start years showed a concentration of records in more recent years.
+
+The OTHER funding classification accounted for the largest share across many study years.
+
+Industry-funded studies also contributed to the observed distribution.
+
+These patterns should be interpreted in the context of the dataset selection method rather than as evidence of registry-wide growth.
+
+---
+
+## 5. Clinical Trial Enrollment Distribution
+
+![Enrollment Distribution](figures/Enrollment_distribution.png)
+
+Participant enrollment varied substantially across the analyzed studies.
+
+The distribution was strongly right-skewed, with most trials reporting relatively modest enrollment and a small number reporting exceptionally large enrollment values.
+
+A logarithmic scale was used to improve visualization across the wide enrollment range.
+
+This demonstrates the importance of considering distributional characteristics when analyzing clinical research data.
+
+---
+
+## 6. Median Enrollment by Study Start Year
+
+![Median Enrollment](figures/Median%20enrollment.png)
+
+Median enrollment varied across study start years.
+
+Earlier years showed larger fluctuations, while more recent years displayed comparatively stable median enrollment values.
+
+For studies starting in 2025 and 2026, the plotted median enrollment was approximately 60 participants.
+
+These observations should be interpreted cautiously because the number of sampled studies varies across years.
+
+---
+
+## 7. Distribution of Clinical Trials by Study Phase
+
+![Study Phases](figures/Study%20phases.png)
+
+The study phase distribution showed:
+
+| Study Phase | Number of Trials |
+|---|---:|
+| Not Reported | 3,424 |
+| Phase 2 | 436 |
+| Phase 1 | 351 |
+| Phase 3 | 324 |
+| Phase 4 | 251 |
+| Phase 1 / Phase 2 | 120 |
+| Early Phase 1 | 56 |
+| Phase 2 / Phase 3 | 38 |
+| **Total** | **5,000** |
+
+Approximately 68.5% of the analyzed records had no reported study phase.
+
+The absence of phase information does not necessarily indicate incomplete reporting, as phase classifications are not applicable to all types of interventional studies.
+
+---
+
+## 8. Most Frequent Conditions in Completed Clinical Trials
+
+![Most Frequent Conditions](figures/Most%20frequent%20condition%20in%20completed%20trials.png)
+
+The most frequently represented condition labels included:
+
+| Condition | Number of Trials |
+|---|---:|
+| Anxiety | 85 |
+| Obesity | 74 |
+| Healthy | 72 |
+| Stroke | 61 |
+| Depression | 50 |
+| Postoperative Pain | 50 |
+| Pain | 43 |
+| Breast Cancer | 40 |
+| Healthy Volunteers | 39 |
+| Hypertension | 38 |
+
+Anxiety and obesity were among the most frequently reported condition labels in the analyzed sample.
+
+Because individual trials may report multiple conditions, these counts are not mutually exclusive.
+
+---
+
+## 9. Clinical Trials by Study Start Year
+
+![Clinical Trials by Start Year](figures/Clinical%20trials%20by%20year.png)
+
+The distribution of clinical trials by study start year showed a concentration of records with recent start dates.
+
+The highest number of sampled studies occurred in 2025, followed by a lower count for 2026.
+
+This pattern reflects the temporal composition of the selected records and may be influenced by the registry update-based sampling strategy.
+
+It should not be interpreted as a measure of overall clinical trial growth.
+
+---
+
+## Data Quality Assessment
+
+Data quality assessment formed an important component of the analytical workflow.
+
+The analysis included:
+
+- Examination of missing values
+- Verification of unique NCT identifiers
+- Review of study phase completeness
+- Assessment of enrollment information
+- Inspection of categorical variables
+- Preparation of date fields for analysis
+
+The dataset contained 5,000 unique NCT identifiers across 5,000 records.
+
+Missing or non-applicable values were observed in several variables, including study phases, collaborators, and posted study results.
+
+These observations highlight the importance of considering registry reporting requirements and study characteristics when interpreting clinical trial datasets.
+
+---
+
+## Repository Structure
+
+```text
+clinical-trial-landscape-analysis/
+│
+├── README.md
+├── LICENSE
+├── requirements.txt
+│
+├── Clinical_Trial_Analysis_5000.pbix
+│
+├── fetch_clinical_trials.py
+├── process_clinical_trials.py
+├── validate_clinical_trials.py
+├── explore_data.py
+├── update_clinical_trials.py
+│
+└── figures/
+    ├── Power BI dashboard.png
+    ├── Drug vs non drug.png
+    ├── Drug trials by funding category.png
+    ├── Enrollment_distribution.png
+    ├── Funding classification.png
+    ├── Funding over time.png
+    ├── Intervention.png
+    ├── Median enrollment.png
+    ├── Most frequent condition in completed trials.png
+    ├── Study phases.png
+    └── Clinical trials by year.png
+```
+
+The additional `Intervention.png` file is retained in the figures directory but is not included in the analytical findings above.
+
+---
+
+## Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/kwakuanim/clinical-trial-landscape-analysis.git
+
+cd clinical-trial-landscape-analysis
+```
+
+### 2. Install Python Dependencies
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+### 3. Retrieve Clinical Trial Data
+
+```bash
+python fetch_clinical_trials.py
+```
+
+The retrieval script obtains clinical trial records through the ClinicalTrials.gov API.
+
+The complete execution order of the remaining analysis scripts has not yet been independently tested on a fresh installation.
+
+### 4. Explore the Power BI Dashboard
+
+Open the following file using Microsoft Power BI Desktop:
+
+`Clinical_Trial_Analysis_5000.pbix`
+
+---
+
+## Project Limitations
+
+The analysis has several limitations:
+
+1. **Sampling:** The dataset represents selected recently updated completed interventional studies rather than the entire ClinicalTrials.gov registry.
+2. **Data completeness:** Certain variables contain missing or non-applicable values.
+3. **Enrollment:** Reported enrollment may include actual or estimated participant counts.
+4. **Temporal interpretation:** Study start-year patterns may be influenced by the sampling approach.
+5. **Classification:** Drug and non-drug categories follow the project's analytical classification method.
+6. **Causality:** The findings are descriptive and do not establish causal relationships.
+
+---
+
+## Future Improvements
+
+Potential extensions include:
+
+- Expanding the clinical trial dataset.
+- Implementing automated data refresh workflows.
+- Improving documentation of the complete analytical pipeline.
+- Introducing automated data validation tests.
+- Expanding Power BI filtering and analytical capabilities.
+- Investigating clinical trial characteristics across therapeutic areas.
+- Exploring advanced statistical and predictive analytical methods.
+
+---
+
+## Author
+
+**Manfred Anim, PhD**
+
+Molecular Medicine | Translational Immunology | Genomics | Data Science
+
+**GitHub:** [kwakuanim](https://github.com/kwakuanim)
+
+**Professional Interests:**
+
+Biomedical Data Science, Bioinformatics, Clinical Research Analytics, Translational Medicine, and Precision Medicine.
+
+---
+
+## Acknowledgment
+
+This project was developed as part of the certified **Data Scientist training programme at DBE Academy (2026)**.
+
+The programme comprised 543 teaching hours covering Python, R, database technologies, artificial intelligence, machine learning, data visualization, cloud computing, and practical project development.
+
+---
+
+## Data Attribution
+
+Clinical trial information was obtained from [ClinicalTrials.gov](https://clinicaltrials.gov/), maintained by the U.S. National Library of Medicine.
+
+This project is intended for educational, research, and professional portfolio purposes.
