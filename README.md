@@ -171,11 +171,11 @@ The dashboard includes:
 
 ---
 
-# Key Findings and Visualizations
+## Key Findings and Visualizations
 
 The analysis examined 5,000 completed interventional clinical trials retrieved from ClinicalTrials.gov.
 
-- **Enrollment:** The studies reported a combined enrollment of 2,425,863 participants, with a median enrollment of 62 participants per trial.
+- **Enrollment:** The studies reported a combined enrollment of 2,425,863, with a median enrollment of 62 participants per trial.
 - **Study phases:** Phase information was not reported for 3,424 studies (68.5%). Among studies with reported phases, Phase 2 (436) and Phase 1 (351) were the most common categories.
 - **Funding:** The OTHER funding category accounted for 3,723 studies (74.5%), followed by INDUSTRY with 996 studies (19.9%).
 - **Drug classification:** Drug interventions were identified in 1,530 studies (30.6%), while 3,470 studies (69.4%) were classified as non-drug trials.
@@ -184,7 +184,7 @@ The analysis examined 5,000 completed interventional clinical trials retrieved f
 
 **Interpretation:** The dataset comprises a selected sample of recently updated, completed interventional studies. Therefore, the observed distributions and temporal patterns should not be interpreted as representative of all clinical trials registered worldwide.
 
-## 1. Drug vs. Non-Drug Clinical Trials
+### 1. Drug vs. Non-Drug Clinical Trials
 
 ![Drug vs Non-Drug Clinical Trials](figures/Drug%20vs%20non%20drug.png)
 
@@ -202,7 +202,73 @@ The classification reflects the project's intervention-based grouping and should
 
 ---
 
-## 2. Clinical Trials by Funding Classification
+### 2. Clinical Trials by Study Start Year
+
+![Clinical Trials by Start Year](figures/Clinical%20trials%20by%20year.png)
+
+The distribution of clinical trials by study start year showed a concentration of records with recent start dates.
+
+The highest number of sampled studies occurred in 2025, followed by a lower count for 2026.
+
+This pattern reflects the temporal composition of the selected records and may be influenced by the registry update-based sampling strategy.
+
+It should not be interpreted as a measure of overall clinical trial growth.
+
+---
+
+### 3. Median Enrollment by Study Start Year
+
+![Median Enrollment](figures/Median%20enrollment.png)
+
+Median enrollment varied across study start years.
+
+Earlier years showed larger fluctuations, while more recent years displayed comparatively stable median enrollment values.
+
+For studies starting in 2025 and 2026, the plotted median enrollment was approximately 60 participants.
+
+These observations should be interpreted cautiously because the number of sampled studies varies across years.
+
+---
+
+### 4. Clinical Trial Enrollment Distribution
+
+![Enrollment Distribution](figures/Enrollment_distribution.png)
+
+Participant enrollment varied substantially across the analyzed studies.
+
+The distribution was strongly right-skewed, with most trials reporting relatively modest enrollment and a small number reporting exceptionally large enrollment values.
+
+A logarithmic scale was used to improve visualization across the wide enrollment range.
+
+This demonstrates the importance of considering distributional characteristics when analyzing clinical research data.
+
+---
+
+### 5. Distribution of Clinical Trials by Study Phase
+
+![Study Phases](figures/Study%20phases.png)
+
+The study phase distribution showed:
+
+| Study Phase | Number of Trials |
+|---|---:|
+| Not Reported | 3,424 |
+| Phase 2 | 436 |
+| Phase 1 | 351 |
+| Phase 3 | 324 |
+| Phase 4 | 251 |
+| Phase 1 / Phase 2 | 120 |
+| Early Phase 1 | 56 |
+| Phase 2 / Phase 3 | 38 |
+| **Total** | **5,000** |
+
+Approximately 68.5% of the analyzed records had no reported study phase.
+
+The absence of phase information does not necessarily indicate incomplete reporting, as phase classifications are not applicable to all types of interventional studies.
+
+---
+
+### 6. Clinical Trials by Funding Classification
 
 ![Funding Classification](figures/Funding%20classification.png)
 
@@ -227,7 +293,7 @@ These categories describe registry funding classifications rather than the finan
 
 ---
 
-## 3. Drug vs. Non-Drug Trials by Funding Category
+### 7. Drug vs. Non-Drug Trials by Funding Category
 
 ![Drug Trials by Funding Category](figures/Drug%20trials%20by%20funding%20category.png)
 
@@ -241,7 +307,7 @@ This comparison illustrates how intervention classifications differ across fundi
 
 ---
 
-## 4. Funding Categories by Study Start Year
+### 8. Funding Categories by Study Start Year
 
 ![Funding Over Time](figures/Funding%20over%20time.png)
 
@@ -255,59 +321,7 @@ These patterns should be interpreted in the context of the dataset selection met
 
 ---
 
-## 5. Clinical Trial Enrollment Distribution
-
-![Enrollment Distribution](figures/Enrollment_distribution.png)
-
-Participant enrollment varied substantially across the analyzed studies.
-
-The distribution was strongly right-skewed, with most trials reporting relatively modest enrollment and a small number reporting exceptionally large enrollment values.
-
-A logarithmic scale was used to improve visualization across the wide enrollment range.
-
-This demonstrates the importance of considering distributional characteristics when analyzing clinical research data.
-
----
-
-## 6. Median Enrollment by Study Start Year
-
-![Median Enrollment](figures/Median%20enrollment.png)
-
-Median enrollment varied across study start years.
-
-Earlier years showed larger fluctuations, while more recent years displayed comparatively stable median enrollment values.
-
-For studies starting in 2025 and 2026, the plotted median enrollment was approximately 60 participants.
-
-These observations should be interpreted cautiously because the number of sampled studies varies across years.
-
----
-
-## 7. Distribution of Clinical Trials by Study Phase
-
-![Study Phases](figures/Study%20phases.png)
-
-The study phase distribution showed:
-
-| Study Phase | Number of Trials |
-|---|---:|
-| Not Reported | 3,424 |
-| Phase 2 | 436 |
-| Phase 1 | 351 |
-| Phase 3 | 324 |
-| Phase 4 | 251 |
-| Phase 1 / Phase 2 | 120 |
-| Early Phase 1 | 56 |
-| Phase 2 / Phase 3 | 38 |
-| **Total** | **5,000** |
-
-Approximately 68.5% of the analyzed records had no reported study phase.
-
-The absence of phase information does not necessarily indicate incomplete reporting, as phase classifications are not applicable to all types of interventional studies.
-
----
-
-## 8. Most Frequent Conditions in Completed Clinical Trials
+### 9. Most Frequent Conditions in Completed Clinical Trials
 
 ![Most Frequent Conditions](figures/Most%20frequent%20condition%20in%20completed%20trials.png)
 
@@ -329,20 +343,6 @@ The most frequently represented condition labels included:
 Anxiety and obesity were among the most frequently reported condition labels in the analyzed sample.
 
 Because individual trials may report multiple conditions, these counts are not mutually exclusive.
-
----
-
-## 9. Clinical Trials by Study Start Year
-
-![Clinical Trials by Start Year](figures/Clinical%20trials%20by%20year.png)
-
-The distribution of clinical trials by study start year showed a concentration of records with recent start dates.
-
-The highest number of sampled studies occurred in 2025, followed by a lower count for 2026.
-
-This pattern reflects the temporal composition of the selected records and may be influenced by the registry update-based sampling strategy.
-
-It should not be interpreted as a measure of overall clinical trial growth.
 
 ---
 
